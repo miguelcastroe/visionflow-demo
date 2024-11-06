@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VisionFlow Demo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <section id="input-script">
+        <h2>1. Input Script</h2>
+        <textarea id="script-input" placeholder="Paste your script here..."></textarea>
+        <button onclick="goToStep('ai-script')">Next</button>
+    </section>
+
+    <section id="ai-script" style="display: none;">
+        <h2>2. AI-Script Prompting</h2>
+        <p>Suggested Improvements:</p>
+        <ul>
+            <li>Optimize pacing for dramatic effect.</li>
+            <li>Clarify character motivations in scenes.</li>
+        </ul>
+        <button onclick="goToStep('pre-visualization')">Next</button>
+    </section>
+
+    <section id="pre-visualization" style="display: none;">
+        <h2>3. AI-Driven Pre-Visualization</h2>
+        <img src="assets/storyboard1.png" alt="Storyboard Example 1">
+        <img src="assets/storyboard2.png" alt="Storyboard Example 2">
+        <button onclick="goToStep('feedback-loop')">Next</button>
+    </section>
+
+    <section id="feedback-loop" style="display: none;">
+        <h2>4. Review & Feedback Loop</h2>
+        <textarea id="feedback-input" placeholder="Enter feedback here..."></textarea>
+        <button onclick="goToStep('final-output')">Next</button>
+    </section>
+
+    <section id="final-output" style="display: none;">
+        <h2>5. Final Output</h2>
+        <p>Based on your feedback, here is the refined output:</p>
+        <video src="assets/sample-video.mp4" controls></video>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
